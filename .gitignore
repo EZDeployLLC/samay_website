@@ -12,6 +12,9 @@ dist
 dist-ssr
 *.local
 
+# Netlify CLI local state (should never be committed)
+.netlify
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json
@@ -22,5 +25,3 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
-
-.DS_Store
