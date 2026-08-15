@@ -5,6 +5,8 @@ import post04 from '../content/blog/04_the_revenue_you_cant_see.md?raw'
 import post05 from '../content/blog/05_designing_for_neurodivergent_majority.md?raw'
 import post06 from '../content/blog/06_why_creatives_hate_every_tool.md?raw'
 import post07 from '../content/blog/07_timesheets_are_just_the_start.md?raw'
+import post08 from '../content/blog/08_meet_them_where_they_are.md?raw'
+import post09 from '../content/blog/09_the_1800_hour_question.md?raw'
 
 export interface BlogPost {
   id: number
@@ -52,7 +54,7 @@ function parsePost(raw: string): { title: string; subtitle: string; body: string
   return { title, subtitle, body }
 }
 
-const parsed = [post01, post02, post03, post04, post05, post06, post07].map(parsePost)
+const parsed = [post01, post02, post03, post04, post05, post06, post07, post08, post09].map(parsePost)
 
 export const posts: BlogPost[] = [
   {
@@ -146,6 +148,32 @@ export const posts: BlogPost[] = [
     gradient: 'from-[#2563eb]/40 to-[#0d9488]/20',
     image: '/images/blog/team-vision.jpg',
     raw: parsed[6].body,
+  },
+  {
+    id: 8,
+    slug: 'meet-them-where-they-are',
+    title: parsed[7].title,
+    subtitle: parsed[7].subtitle,
+    excerpt: 'Creatives open their messaging app 50 times a day. They open their time tracker zero times. The future of time tracking lives inside the channels they already use.',
+    date: 'JUL 8, 2026',
+    author: 'Samay Team',
+    tag: 'Strategy',
+    gradient: 'from-[#ea580c]/40 to-brand/20',
+    image: '/images/blog/messaging-channel.jpg',
+    raw: parsed[7].body,
+  },
+  {
+    id: 9,
+    slug: 'the-1800-hour-question',
+    title: parsed[8].title,
+    subtitle: parsed[8].subtitle,
+    excerpt: 'Every FTE represents 1,800 billable hours per year. Most agencies can\u2019t tell you how those hours are actually being spent. That\u2019s not a timesheet problem. It\u2019s a strategy problem.',
+    date: 'AUG 5, 2026',
+    author: 'Samay Team',
+    tag: 'Strategy',
+    gradient: 'from-[#7c3aed]/40 to-[#e11d48]/20',
+    image: '/images/blog/strategy-meeting.jpg',
+    raw: parsed[8].body,
   },
 ]
 

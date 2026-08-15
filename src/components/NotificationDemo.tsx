@@ -4,11 +4,10 @@ import { motion, AnimatePresence, useReducedMotion } from 'framer-motion'
 /**
  * HeroSlider: auto-advancing screenshot carousel showing the full Samay loop.
  *   1. Slack notification with drafted timesheet
- *   2. User replies to adjust in plain language
- *   3. Samay updates the breakdown
- *   4. Filed in Slack
- *   5. Web app with pre-filled timesheet
- *   6. Web app filed state
+ *   2. Filed in Slack
+ *   3. Gmail notification
+ *   4. Web app with pre-filled timesheet
+ *   5. Web app filed state
  */
 
 const SLIDES = [
@@ -17,16 +16,12 @@ const SLIDES = [
     label: 'Your timesheet arrives in Slack, already drafted.',
   },
   {
-    image: '/images/hero-slack-reply.png',
-    label: 'Adjust in plain language. No forms, no fields.',
-  },
-  {
-    image: '/images/hero-slack-updated.png',
-    label: 'Updated in seconds. Ready to approve.',
-  },
-  {
     image: '/images/hero-slack-filed.png',
     label: 'Filed from Slack. The whole week, handled.',
+  },
+  {
+    image: '/images/hero-gmail-notification.png',
+    label: 'Or approve straight from Gmail. One click, same result.',
   },
   {
     image: '/images/hero-web-filled.png',

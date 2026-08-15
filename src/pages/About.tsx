@@ -130,7 +130,7 @@ export default function About() {
             ))}
           </motion.div>
           <p className="font-body text-[14px] text-text-muted mb-8">
-            Currently in private pilot with select creative agencies.
+            Currently working closely with select creative agencies.
           </p>
           <a href="mailto:hello@samayapp.co"
             className="inline-block font-body text-[15px] font-semibold text-text-light bg-brand hover:bg-brand-light px-9 py-4 rounded-full transition-all duration-300 no-underline hover:shadow-lg hover:shadow-brand/20 hover:-translate-y-0.5">

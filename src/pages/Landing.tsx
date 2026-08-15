@@ -18,6 +18,7 @@ const stats = [
   { num: '$7.4B', label: 'lost per day to inaccurate time tracking in the US alone', source: 'HBR / AffinityLive' },
   { num: '80%', label: 'of timesheets are filled in from memory, days after the work actually happened', source: 'AffinityLive / Accelo' },
   { num: '1 in 3', label: 'billable hours never makes it onto the timesheet when entry is manual', source: 'WorkflowMax / Rize' },
+  { num: '60%', label: 'of the workday spent on "work about work" instead of the creative work that drives revenue', source: 'Asana Anatomy of Work Index' },
 ]
 
 type Feature = { eyebrow: string; title: string; body: string; image: string; contain?: boolean }
@@ -26,7 +27,7 @@ const features: Feature[] = [
   {
     eyebrow: 'TIMESHEETS',
     title: 'It figures out the week,\nso nobody has to.',
-    body: 'Samay pieces together your team\u2019s week from the tools they already use: calendar, Slack, Figma, Monday. It drafts the timesheet for them. No timers. No forms. Just a draft waiting for a quick review.',
+    body: 'Samay pieces together your team\u2019s week from the tools they already use: calendar, Slack, Figma, Monday. It drafts the timesheet for them. No timers. No forms. Just a draft waiting for a quick review. Works daily or weekly, depending on how your agency tracks time.',
     image: '/images/feature-timesheet.png',
   },
   {
@@ -39,7 +40,7 @@ const features: Feature[] = [
   {
     eyebrow: 'CHANNELS',
     title: 'Meet creatives\nwhere they are.',
-    body: 'A Friday Slack message. A WhatsApp nudge. A magic link to a single-page approval. No app to download, no password to remember, no onboarding to survive.',
+    body: 'A Friday Slack message. A Gmail notification. A WhatsApp nudge. A magic link to a single-page approval. No app to download, no password to remember, no onboarding to survive.',
     image: '/images/feature-channels.png',
   },
   {
@@ -69,10 +70,11 @@ const faqs = [
   { q: 'Can our IT or security team review Samay first?', a: 'Yes. We are happy to walk your team through how Samay handles data and to answer diligence questions before any rollout. Reach us at hello@samayapp.co.' },
   { q: 'What can Samay actually see?', a: 'Only what it needs to draft a timesheet: calendar events and activity signals from the tools you choose to connect. Samay does not record your screen, log keystrokes, or read message contents to monitor anyone. You approve every entry before it is filed.' },
   { q: 'Do you sell our data or train models on it?', a: 'Never. Your data is used to draft your own entries and nothing else. We do not sell it, and we do not use it to train models. It stays yours, and it exports to the systems your Finance team already trusts.' },
-  { q: 'Do my creatives need to install anything?', a: 'No. Zero mandatory engagement. Notifications arrive through channels they already use: Slack, WhatsApp, or SMS. A magic link opens a single-page approval. No app, no password, no onboarding.' },
-  { q: 'What happens to our existing tools?', a: 'Samay complements your current system. It doesn\u2019t replace it. Entries export to Harvest, Accountability, NetSuite, or CSV. Your Finance team keeps the tools they trust.' },
+  { q: 'Do my creatives need to install anything?', a: 'No. Zero mandatory engagement. Notifications arrive through channels they already use: Slack, Gmail, WhatsApp, or SMS. A magic link opens a single-page approval. No app, no password, no onboarding.' },
+  { q: 'What happens to our existing tools?', a: 'Samay complements your current system. It doesn\u2019t replace it. Entries export to Harvest, Accountability, Workamajig, NetSuite, or CSV. Your Finance team keeps the tools they trust.' },
   { q: 'How accurate are the drafts?', a: 'Draft entries target 80 to 90% accuracy based on connected app data. A human always reviews and approves before anything is submitted. Confidence indicators are visible on every entry.' },
-  { q: 'How do I get started?', a: 'Book a demo. We connect to your existing tools and have a pilot running in days, not months. No procurement battle, no IT project.' },
+  { q: 'How do I get started?', a: 'Book a demo. We connect to your existing tools and have you running live in days, not months. No procurement battle, no IT project.' },
+  { q: 'What does it cost?', a: 'Samay is priced per user per month. We offer founding-customer pricing for agencies who join early. Contact us at hello@samayapp.co for details.' },
 ]
 
 export default function Landing() {
@@ -132,7 +134,7 @@ export default function Landing() {
               initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.7, duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
               className="flex flex-col sm:flex-row gap-4"
             >
-              <a href="https://calendly.com" target="_blank" rel="noopener noreferrer"
+              <a href="mailto:hello@samayapp.co"
                 className="font-body text-[15px] font-semibold text-text-light bg-brand hover:bg-brand-light px-9 py-4 rounded-full transition-all duration-300 no-underline hover:shadow-lg hover:shadow-brand/20 hover:-translate-y-0.5">
                 Book a Demo
               </a>
@@ -170,7 +172,7 @@ export default function Landing() {
           </p>
           <motion.div
             variants={stagger} initial="hidden" whileInView="show" viewport={{ once: true, margin: '-60px' }}
-            className="grid grid-cols-1 md:grid-cols-3 gap-6"
+            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6"
           >
             {stats.map((s) => (
               <motion.div key={s.num} variants={fadeUp}
@@ -233,6 +235,67 @@ export default function Landing() {
         </div>
       </section>
 
+      {/* Integrations */}
+      <section className="bg-white px-6 md:px-16 py-12 md:py-20">
+        <div className="max-w-[1120px] mx-auto text-center">
+          <Eyebrow>INTEGRATIONS</Eyebrow>
+          <h2 className="font-display text-[28px] md:text-[36px] font-medium text-text-dark leading-[1.2] mt-4 mb-10 max-w-[600px] mx-auto">
+            Works with the tools your agency already uses.
+          </h2>
+          <div className="space-y-6">
+            {[
+              { label: 'Channels', items: ['Slack', 'Gmail', 'Google Chat', 'WhatsApp', 'SMS'] },
+              { label: 'Connected Apps', items: ['Google Calendar', 'Figma', 'Google Drive', 'Monday.com', 'Smartsheet'] },
+              { label: 'Exports To', items: ['Harvest', 'Accountability', 'Workamajig', 'Advantage', 'NetSuite', 'CSV'] },
+            ].map((row) => (
+              <div key={row.label} className="flex flex-col items-center gap-3">
+                <span className="font-mono text-[11px] text-text-muted tracking-wider uppercase">{row.label}</span>
+                <div className="flex flex-wrap justify-center gap-2">
+                  {row.items.map((item) => (
+                    <span key={item} className="font-body text-[14px] text-text-dark bg-warm px-4 py-1.5 rounded-full border border-border-light">{item}</span>
+                  ))}
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Why Different */}
+      <Section dark className="px-6 md:px-16 py-16 md:py-32">
+        <div className="max-w-[1120px] mx-auto text-center">
+          <Eyebrow light>WHY WE'RE DIFFERENT</Eyebrow>
+          <h2 className="font-display text-[32px] md:text-[44px] font-medium text-text-light leading-[1.15] mt-4 mb-12 max-w-[800px] mx-auto">
+            Every other tool asks your team to do the work. Samay does the work for them.
+          </h2>
+          <motion.div
+            variants={stagger} initial="hidden" whileInView="show" viewport={{ once: true, margin: '-60px' }}
+            className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-[900px] mx-auto mb-10"
+          >
+            <motion.div variants={fadeUp} className="bg-white/[0.06] border border-white/[0.08] p-8 rounded-lg text-left">
+              <h3 className="font-display text-[18px] font-medium text-text-light-muted mb-5">Traditional tools</h3>
+              <ul className="space-y-3">
+                {['Timer-based', 'Requires daily discipline', 'Desktop or mobile app', 'Productivity scores', 'Onboarding and training'].map((item) => (
+                  <li key={item} className="font-body text-[15px] text-text-light-muted/60 leading-[1.5] flex items-start gap-2">
+                    <span className="text-text-light-muted/30 mt-0.5">&times;</span> {item}
+                  </li>
+                ))}
+              </ul>
+            </motion.div>
+            <motion.div variants={fadeUp} className="bg-brand/10 border border-brand/20 p-8 rounded-lg text-left">
+              <h3 className="font-display text-[18px] font-medium text-text-light mb-5">Samay</h3>
+              <ul className="space-y-3">
+                {['Observation-based', 'Requires one tap to approve', 'Channel-first: Slack, Gmail, WhatsApp', 'No surveillance, no scores', 'No onboarding required'].map((item) => (
+                  <li key={item} className="font-body text-[15px] text-text-light leading-[1.5] flex items-start gap-2">
+                    <span className="text-brand-light mt-0.5">&#10003;</span> {item}
+                  </li>
+                ))}
+              </ul>
+            </motion.div>
+          </motion.div>
+        </div>
+      </Section>
+
       {/* Social Proof / Testimonials */}
       <Section className="bg-warm px-6 md:px-16 py-16 md:py-32">
         <div className="max-w-[1120px] mx-auto text-center">
@@ -248,6 +311,7 @@ export default function Landing() {
               { text: '"I have never been this excited about timesheets."', role: 'Global Account Director, Full-Service Agency' },
               { text: '"You hit the problem head on. This is exactly what we need."', role: 'Head of IT, Creative Agency' },
               { text: '"Comparing creative work to quantifiable tasks is like trying to weigh flour with a tape measure."', role: 'Creative Professional' },
+              { text: '"Getting paid for all the work your agency does will add at least 10% to revenue. The data has to be right first."', role: 'Agency Management Consultant' },
             ].map((q) => (
               <motion.div key={q.role} variants={fadeUp}
                 className="bg-white p-5 md:p-8 rounded-lg text-left border border-border-light"
@@ -335,7 +399,7 @@ export default function Landing() {
             Let your creatives do what they do best.
           </h2>
           <p className="font-body text-[18px] text-text-light-muted mb-8">Samay takes care of the rest.</p>
-          <a href="https://calendly.com" target="_blank" rel="noopener noreferrer"
+          <a href="mailto:hello@samayapp.co"
             className="inline-block font-body text-[15px] font-semibold text-text-light bg-brand hover:bg-brand-light px-10 py-4 rounded-full transition-all duration-300 no-underline hover:shadow-lg hover:shadow-brand/20 hover:-translate-y-0.5 mb-6">
             Book a Demo
           </a>

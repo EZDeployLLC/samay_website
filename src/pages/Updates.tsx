@@ -18,26 +18,26 @@ const milestones = [
   {
     status: 'complete' as const,
     title: 'Product Validation & MVP Direction',
-    date: 'Jun 2026',
+    date: 'Jun \u2013 Aug 2026',
     description: 'Built a fully interactive prototype with 55+ screens and validated the product direction with agency professionals. The pie chart visual and team management workflow resonated immediately with every person we showed it to.',
   },
   {
     status: 'current' as const,
-    title: 'Private Pilots',
-    date: 'Jul 2026',
-    description: 'Working closely with select creative agencies to validate the product in real workflows. Gathering feedback from operations, creative, and agency leadership. Iterating on integrations and the drafting engine.',
+    title: 'Early Access',
+    date: 'Aug \u2013 Nov 2026',
+    description: 'Working closely with creative agencies across different channel environments and ERP systems. Gathering feedback from operations, creative, and agency leadership. Iterating on integrations and the drafting engine.',
   },
   {
     status: 'upcoming' as const,
     title: 'Scaled Development',
-    date: 'Q3 2026',
-    description: 'Building the production application. Core features: auto-drafted timesheets from connected tools, team management mode, channel-first notifications via Slack and WhatsApp, and integration with Harvest, NetSuite, and Monday.',
+    date: 'Aug \u2013 Sep 2026',
+    description: 'Building the production application. Core features: auto-drafted timesheets from connected tools, team management mode, channel-first notifications via Slack, Gmail, and WhatsApp, and integration with Harvest, Workamajig, NetSuite, and Monday.',
   },
   {
     status: 'upcoming' as const,
-    title: 'Early Access',
+    title: 'General Availability',
     date: 'Q4 2026',
-    description: 'Opening access to a broader group of creative agencies. Expanding integrations and refining drafting accuracy based on pilot learnings.',
+    description: 'Opening access to a broader group of creative agencies. Expanding integrations, refining drafting accuracy, and onboarding agencies at scale.',
   },
 ]
 
@@ -146,9 +146,9 @@ export default function Updates() {
             Want to be part of the journey?
           </h2>
           <p className="font-body text-[16px] text-text-light-muted mb-8">
-            We're looking for creative agencies to join our private pilot.
+            We're looking for creative agencies to join our early access program.
           </p>
-          <a href="https://calendly.com" target="_blank" rel="noopener noreferrer"
+          <a href="mailto:hello@samayapp.co"
             className="inline-block font-body text-[15px] font-semibold text-text-light bg-brand hover:bg-brand-light px-9 py-4 rounded-full transition-all duration-300 no-underline hover:shadow-lg hover:shadow-brand/20 hover:-translate-y-0.5">
             Book a Demo
           </a>

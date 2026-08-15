@@ -95,9 +95,13 @@ export default function Navbar() {
           </div>
 
           <a
-            href="https://calendly.com"
-            target="_blank"
-            rel="noopener noreferrer"
+            href="https://app.samayapp.co/"
+            className="font-body text-[15px] text-text-light-muted hover:text-text-light transition-colors no-underline"
+          >
+            Login
+          </a>
+          <a
+            href="mailto:hello@samayapp.co"
             className="font-body text-[14px] font-semibold text-text-light bg-brand hover:bg-brand-light px-7 py-3 rounded-full transition-colors no-underline"
           >
             Book a Demo
@@ -166,9 +170,13 @@ export default function Navbar() {
                 Privacy
               </Link>
               <a
-                href="https://calendly.com"
-                target="_blank"
-                rel="noopener noreferrer"
+                href="https://app.samayapp.co/"
+                className="font-body text-[16px] text-text-light-muted hover:text-text-light no-underline py-3"
+              >
+                Login
+              </a>
+              <a
+                href="mailto:hello@samayapp.co"
                 className="font-body text-[15px] font-semibold text-text-light bg-brand hover:bg-brand-light px-7 py-3.5 rounded-full transition-colors no-underline text-center mt-3 mb-1"
               >
                 Book a Demo

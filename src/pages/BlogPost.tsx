@@ -115,9 +115,7 @@ export default function BlogPost() {
               See how Samay handles timesheets for creative agencies.
             </p>
             <a
-              href="https://calendly.com"
-              target="_blank"
-              rel="noopener noreferrer"
+              href="mailto:hello@samayapp.co"
               className="inline-block font-body text-[14px] font-semibold text-text-light bg-brand hover:bg-brand-light px-8 py-3.5 rounded-full transition-all duration-300 no-underline hover:shadow-lg hover:shadow-brand/20 hover:-translate-y-0.5"
             >
               Book a Demo
