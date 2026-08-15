@@ -6,8 +6,10 @@ import { motion, AnimatePresence, useReducedMotion } from 'framer-motion'
  *   1. Slack notification with drafted timesheet
  *   2. Filed in Slack
  *   3. Gmail notification
- *   4. Web app with pre-filled timesheet
- *   5. Web app filed state
+ *   4. Mobile voice input
+ *   5. Mobile filed confirmation
+ *   6. Web app with pre-filled timesheet
+ *   7. Web app filed state
  */
 
 const SLIDES = [
@@ -22,6 +24,16 @@ const SLIDES = [
   {
     image: '/images/hero-gmail-notification.png',
     label: 'Or approve straight from Gmail. One click, same result.',
+  },
+  {
+    image: '/images/hero-mobile-voice.png',
+    label: 'Just say what you worked on. Samay does the rest.',
+    mobile: true,
+  },
+  {
+    image: '/images/hero-mobile-filed.png',
+    label: 'Confirmed on your phone. Your week, filed in seconds.',
+    mobile: true,
   },
   {
     image: '/images/hero-web-filled.png',
@@ -63,7 +75,7 @@ export default function NotificationDemo() {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: reduce ? 0.15 : 0.9, ease: [0.4, 0, 0.2, 1] }}
-            className="absolute inset-0 w-full h-full object-cover object-top"
+            className={`absolute inset-0 w-full h-full ${SLIDES[current].mobile ? 'object-contain' : 'object-cover object-top'}`}
           />
         </AnimatePresence>
       </div>
