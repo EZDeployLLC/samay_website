@@ -10,11 +10,12 @@ import Updates from './pages/Updates'
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
 import ScrollToTop from './components/ScrollToTop'
+import PasswordGate from './components/PasswordGate'
 
 export default function App() {
   const location = useLocation()
   return (
-    <>
+    <PasswordGate>
       <Navbar />
       <AnimatePresence mode="wait">
         <Routes location={location} key={location.pathname}>
@@ -29,6 +30,6 @@ export default function App() {
       </AnimatePresence>
       <Footer />
       <ScrollToTop />
-    </>
+    </PasswordGate>
   )
 }
