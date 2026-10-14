@@ -42,11 +42,19 @@ export default function PasswordGate({ children }: { children: React.ReactNode }
           onSubmit={e => { e.preventDefault(); submit() }}
           className="flex flex-col gap-4"
         >
+          {/* Customers keep their Samay login under samayapp.co in their
+              password manager, which would otherwise fill it in here. */}
           <input
             type="password"
+            name="site-preview-password"
+            autoComplete="off"
+            data-1p-ignore
+            data-lpignore="true"
+            data-bwignore
+            aria-label="Site preview password"
             value={value}
             onChange={e => { setValue(e.target.value); setError(false) }}
-            placeholder="Password"
+            placeholder="Site preview password"
             autoFocus
             className="w-full px-5 py-3.5 rounded-lg bg-dark-lighter border border-white/[0.08] text-text-light font-body text-[15px] placeholder:text-text-light-muted/50 outline-none focus:border-brand transition-colors"
           />
@@ -62,6 +70,15 @@ export default function PasswordGate({ children }: { children: React.ReactNode }
             Enter
           </button>
         </form>
+        <p className="font-body text-[14px] text-text-light-muted mt-8">
+          Already using Samay?{' '}
+          <a
+            href="https://app.samayapp.co/"
+            className="text-text-light font-semibold underline underline-offset-4 hover:text-brand-light transition-colors"
+          >
+            Sign in to the app
+          </a>
+        </p>
       </div>
     </div>
   )
