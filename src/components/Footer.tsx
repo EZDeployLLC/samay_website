@@ -11,10 +11,10 @@ export default function Footer() {
           </span>
         </div>
         <div className="flex-1 flex flex-wrap justify-center items-center gap-4 md:gap-8">
-          <Link to="/about" className="font-body text-[13px] text-text-light-muted hover:text-text-light transition-colors no-underline">About</Link>
-          <Link to="/blog" className="font-body text-[13px] text-text-light-muted hover:text-text-light transition-colors no-underline">Blog</Link>
+          <Link to="/old/about" className="font-body text-[13px] text-text-light-muted hover:text-text-light transition-colors no-underline">About</Link>
+          <Link to="/old/blog" className="font-body text-[13px] text-text-light-muted hover:text-text-light transition-colors no-underline">Blog</Link>
           <a href="mailto:hello@samayapp.co" className="font-body text-[13px] text-text-light-muted hover:text-text-light transition-colors no-underline">Contact</a>
-          <Link to="/privacy" className="font-body text-[13px] text-text-light-muted hover:text-text-light transition-colors no-underline">Privacy</Link>
+          <Link to="/old/privacy" className="font-body text-[13px] text-text-light-muted hover:text-text-light transition-colors no-underline">Privacy</Link>
         </div>
       </div>
     </footer>

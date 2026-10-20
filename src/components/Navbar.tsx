@@ -19,7 +19,7 @@ export default function Navbar() {
     setMobileOpen(false)
   }, [location.pathname])
 
-  const isResourcesPage = ['/blog', '/updates', '/privacy'].includes(location.pathname)
+  const isResourcesPage = ['/old/blog', '/old/updates', '/old/privacy'].includes(location.pathname)
 
   return (
     <motion.nav
@@ -32,7 +32,7 @@ export default function Navbar() {
     >
       <div className="max-w-[1440px] mx-auto flex items-center justify-between px-6 sm:px-8 md:px-16 h-[72px]">
         <Link
-          to="/"
+          to="/old"
           className="font-display font-bold text-[22px] text-text-light no-underline hover:opacity-80 transition-opacity tracking-[0.15em]"
         >
           SAMAY
@@ -41,9 +41,9 @@ export default function Navbar() {
         {/* Desktop nav */}
         <div className="hidden md:flex items-center gap-8">
           <Link
-            to="/about"
+            to="/old/about"
             className={`font-body text-[15px] no-underline transition-colors ${
-              location.pathname === '/about' ? 'text-text-light' : 'text-text-light-muted hover:text-text-light'
+              location.pathname === '/old/about' ? 'text-text-light' : 'text-text-light-muted hover:text-text-light'
             }`}
           >
             About
@@ -72,19 +72,19 @@ export default function Navbar() {
                   className="absolute top-full left-1/2 -translate-x-1/2 mt-2 bg-dark-lighter border border-white/[0.08] rounded-lg py-2 min-w-[160px] shadow-xl shadow-black/30"
                 >
                   <Link
-                    to="/blog"
+                    to="/old/blog"
                     className="block px-5 py-2.5 font-body text-[14px] text-text-light-muted hover:text-text-light hover:bg-white/[0.04] transition-colors no-underline"
                   >
                     Blog
                   </Link>
                   <Link
-                    to="/updates"
+                    to="/old/updates"
                     className="block px-5 py-2.5 font-body text-[14px] text-text-light-muted hover:text-text-light hover:bg-white/[0.04] transition-colors no-underline"
                   >
                     Updates
                   </Link>
                   <Link
-                    to="/privacy"
+                    to="/old/privacy"
                     className="block px-5 py-2.5 font-body text-[14px] text-text-light-muted hover:text-text-light hover:bg-white/[0.04] transition-colors no-underline"
                   >
                     Privacy
@@ -146,7 +146,7 @@ export default function Navbar() {
           >
             <div className="flex flex-col px-6 py-4 gap-1">
               <Link
-                to="/about"
+                to="/old/about"
                 className="font-body text-[16px] text-text-light-muted hover:text-text-light no-underline py-3"
               >
                 About

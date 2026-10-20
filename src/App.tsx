@@ -7,12 +7,14 @@ import Terms from './pages/Terms'
 import Blog from './pages/Blog'
 import BlogPost from './pages/BlogPost'
 import Updates from './pages/Updates'
+import ComingSoonA from './pages/ComingSoonA'
+import ComingSoonB from './pages/ComingSoonB'
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
 import ScrollToTop from './components/ScrollToTop'
 import PasswordGate from './components/PasswordGate'
 
-export default function App() {
+function OldSite() {
   const location = useLocation()
   return (
     <PasswordGate>
@@ -31,5 +33,15 @@ export default function App() {
       <Footer />
       <ScrollToTop />
     </PasswordGate>
+  )
+}
+
+export default function App() {
+  return (
+    <Routes>
+      <Route path="/" element={<ComingSoonB />} />
+      <Route path="/option-a" element={<ComingSoonA />} />
+      <Route path="/old/*" element={<OldSite />} />
+    </Routes>
   )
 }
