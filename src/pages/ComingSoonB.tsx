@@ -1,6 +1,6 @@
 import { useState, useCallback } from 'react'
 
-const SHEET_URL = import.meta.env.VITE_WAITLIST_URL as string | undefined
+const SHEET_URL = 'https://script.google.com/a/macros/samayapp.co/s/AKfycbwGi2phspsXRzxL0Fb3tQcWUQnSqtm336PpVxPIJW2vYG_roHahvD4B9u1v1NxBCFgl/exec'
 
 export default function ComingSoonB() {
   const [email, setEmail] = useState('')
