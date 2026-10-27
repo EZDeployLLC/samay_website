@@ -1,0 +1,399 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Help with Samay · Samay</title>
+<meta name="description" content="Everything in the product, written out. The same pages appear inside Samay once you are signed in; this copy needs no sign-in, so it works when you cannot ">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+:root{--ink:#2e2e2b;--body:#4b4a48;--muted:#a09a92;--green:#1f513f;--line:#e8e5e0;--page:#f4f2ed}
+html{scroll-behavior:smooth}
+body{background:var(--page);color:var(--body);font-family:'Inter',-apple-system,BlinkMacSystemFont,sans-serif;-webkit-font-smoothing:antialiased;line-height:1.75}
+.wrap{max-width:720px;margin:0 auto;padding:0 16px 120px}
+header.top{padding:56px 0 8px}
+.mark{font-family:'Playfair Display',Georgia,serif;font-weight:700;font-size:15px;letter-spacing:.15em;color:var(--ink);text-decoration:none;display:inline-block;margin-bottom:34px}
+h1{font-family:'Playfair Display',Georgia,serif;font-size:40px;font-weight:700;line-height:1.12;color:var(--ink);margin-bottom:14px;letter-spacing:-.01em}
+.intro{font-size:16.5px;line-height:1.6;margin-bottom:22px}
+.switch{font-size:14px;color:var(--muted);padding-bottom:34px;border-bottom:1px solid var(--line)}
+.switch a{color:var(--green);font-weight:500}
+nav.toc{padding:34px 0 10px}
+nav.toc h2{font-family:'Inter',sans-serif;font-size:11px;font-weight:600;letter-spacing:.09em;text-transform:uppercase;color:var(--muted);margin-bottom:18px}
+nav.toc section{margin-bottom:20px}
+nav.toc .g{font-family:'Playfair Display',Georgia,serif;font-size:16px;font-weight:700;color:var(--ink);margin-bottom:6px}
+nav.toc ul{list-style:none;padding:0}
+nav.toc li{margin-bottom:3px}
+nav.toc a{font-size:14.5px;color:var(--body);text-decoration:none;border-bottom:1px solid transparent}
+nav.toc a:hover{border-bottom-color:var(--green);color:var(--green)}
+.grp{margin-top:72px;padding-top:26px;border-top:1px solid var(--line)}
+.grp h2.gh{font-family:'Playfair Display',Georgia,serif;font-size:28px;font-weight:700;color:var(--ink);line-height:1.2;margin-bottom:6px}
+.grp .blurb{font-size:15px;color:var(--muted);margin-bottom:8px}
+article{padding-top:46px}
+article h2{font-family:'Playfair Display',Georgia,serif;font-size:30px;font-weight:700;line-height:1.15;color:var(--ink);margin-bottom:20px;letter-spacing:-.005em;scroll-margin-top:20px}
+.soon{display:inline-block;vertical-align:middle;font-family:'Inter',sans-serif;font-size:11px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:#8a5a12;background:#fdf3e1;border:1px solid #ecd9ad;border-radius:999px;padding:3px 9px;margin-left:8px;position:relative;top:-3px}
+article h3{font-family:'Playfair Display',Georgia,serif;font-size:21px;font-weight:700;line-height:1.3;color:var(--ink);margin:44px 0 14px}
+article h4{font-size:15px;font-weight:600;color:var(--ink);margin:30px 0 10px}
+p{font-size:15px;line-height:1.75;margin-bottom:18px}
+p.lead{font-size:16.5px;line-height:1.6;margin-bottom:26px}
+strong{font-weight:600;color:var(--ink)}
+ol{margin:0 0 22px;padding-left:24px}
+ol li{margin-bottom:16px;padding-left:4px;font-size:15px;font-weight:600;color:var(--ink)}
+ol li span{display:block;font-weight:400;line-height:1.7;color:var(--body)}
+ul{margin:0 0 22px;padding-left:22px}
+ul li{margin-bottom:7px;padding-left:3px;font-size:15px;line-height:1.75}
+dl{margin:0 0 22px}
+dl>div{margin-bottom:14px}
+dt{font-size:15px;font-weight:600;color:var(--ink);margin-bottom:3px}
+dd{font-size:15px;line-height:1.65;margin:0}
+.note{border-left:2px solid var(--green);padding:3px 0 3px 16px;margin:0 0 22px}
+.note p{line-height:1.65;margin:0}
+.quote{font-size:14.5px;line-height:1.6;background:#fff;border:1px solid var(--line);border-radius:5px;padding:12px 15px;margin-bottom:14px}
+.fig{margin:4px 0 24px}
+.fig.instep{margin:12px 0 4px}
+.fig img{display:block;max-width:100%;height:auto;border:1px solid var(--line);border-radius:5px;background:#fff}
+figcaption{font-size:12.5px;line-height:1.5;color:var(--muted);margin-top:8px}
+.slot{margin:4px 0 24px;border:1px solid var(--line);border-radius:5px;background:#faf9f6;padding:26px 20px}
+.slot figcaption{font-size:11px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;margin:0 0 6px}
+.slot p{font-size:13px;line-height:1.55;color:#6b6560;margin:0}
+.onward{margin-bottom:20px}
+.onward a{font-size:15px;font-weight:500;color:var(--green);text-decoration:none;border-bottom:1px solid rgba(31,81,63,.25)}
+.away{font-size:13px;color:var(--muted)}
+footer{margin-top:84px;padding-top:30px;border-top:1px solid var(--line);font-size:14px;color:var(--muted)}
+footer a{color:var(--green)}
+footer p{font-size:14px;margin-bottom:10px}
+@media (max-width:640px){h1{font-size:31px}article h2{font-size:25px}article h3{font-size:19px}.grp h2.gh{font-size:23px}header.top{padding-top:34px}}
+@media print{body{background:#fff}.switch,nav.toc{display:none}article{page-break-inside:auto}article h2{page-break-after:avoid}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <a class="mark" href="/">SAMAY</a>
+    <h1>Help with Samay</h1>
+    <p class="intro">Everything in the product, written out. The same pages appear inside Samay once you are signed in; this copy needs no sign-in, so it works when you cannot get in.</p>
+    <p class="switch">Looking for <a href="admin/">Running Samay at your agency</a>? It is on its own page.</p>
+  </header>
+
+  <nav class="toc">
+    <h2>On this page</h2>
+    
+    <section>
+      <div class="g">Getting started</div>
+      <ul><li><a href="#getting-your-first-timesheet">Getting your first timesheet</a></li><li><a href="#what-your-organization-set-up">What your organization set up for you</a></li></ul>
+    </section>
+    <section>
+      <div class="g">Filing your week</div>
+      <ul><li><a href="#filing-from-your-channel">Filing from Slack, Google Chat or email</a></li><li><a href="#editing-a-week">Editing a week in Samay</a></li><li><a href="#time-off">Time off</a></li><li><a href="#unplaced-hours">Hours Samay could not place</a></li></ul>
+    </section>
+    <section>
+      <div class="g">What Samay reads</div>
+      <ul><li><a href="#connecting-your-apps">Connecting your apps</a></li><li><a href="#what-samay-reads">What Samay reads, and what it doesn&#39;t</a></li></ul>
+    </section>
+    <section>
+      <div class="g">Settings and help</div>
+      <ul><li><a href="#your-preferences">Your preferences</a></li><li><a href="#getting-help">Getting help</a></li></ul>
+    </section>
+    <section>
+      <div class="g">Coming soon</div>
+      <ul><li><a href="#finding-a-job-code">When you cannot find a job code</a></li><li><a href="#using-your-voice">Using your voice to fill a timesheet</a></li><li><a href="#starting-a-week-over">Starting a week over</a></li></ul>
+    </section>
+  </nav>
+
+  
+  <div class="grp">
+    <h2 class="gh">Getting started</h2>
+    <p class="blurb">What arrives, when, and the little you have to set up</p>
+  </div>
+  
+<article id="getting-your-first-timesheet">
+  <h2>Getting your first timesheet</h2>
+  <p class="lead">Samay starts with an invite email. Once you have accepted it, your week arrives drafted in the channel you already use, and you can finish it from there.</p>
+  <h3>Accepting your invite</h3>
+  <p>One email, carrying an <strong>Accept invite</strong> button. There is nothing to sign up for and no workspace to go and find: Samay is invite-only, and that button is what brings your account into being.</p>
+  <ol><li><span>Open the invite and press <strong>Accept invite</strong>. It works once, and it is tied to your own address, so it will not let a colleague in if you forward it.</span></li><li><span>Set a password, or use your company sign-in. Which of the two you are offered was settled by your organization rather than by you. Where it has connected Google Workspace or its own single sign-on, accepting that way is one click and leaves you no password to keep.</span></li><li><span>Answer a few short questions. One of them is where reminders should reach you, and only the channels your workspace has connected are offered, so a short list is normal and not a fault.</span></li></ol>
+  <div class="note"><p>If the invite never came, or it has sat there long enough to go stale, your administrator can send a fresh one from the Team page. Ask them before you write to support: it is one click at their end.</p></div>
+  <h3>If a timesheet already reaches you</h3>
+  <p>Then you are set up, and nothing else here needs doing. Your week arrives drafted on the day your organization chose, and you can finish it from the message without opening Samay at all.</p>
+  <p class="onward"><a href="#filing-from-your-channel">What to do with that message</a></p>
+  <h3>If nothing has arrived</h3>
+  <p>Two things have to be true: your administrator has to have connected a channel for the workspace, and you have to have one switched on for yourself. The first is not yours to do. The second is in <strong>Settings</strong>, then <strong>Preferences</strong>, under <strong>Reminders</strong>.</p>
+  <p>Check as well that you accepted the Slack or Google Chat invitation your organization sent. Samay reaches you there, so an unaccepted invitation means a message with nowhere to land.</p>
+  <div class="note"><p>You cannot connect a channel yourself, and nothing in Samay will ask you to. Slack, Google Chat and email are connected once for the whole workspace by an administrator. If none of them is offered to you, that is the thing to chase, and it is a question for your administrator rather than for support.</p></div>
+  <h3>What arrives, and when</h3>
+  <p>One message, on the day your organization chose. It carries your week already drafted: your hours split across the job codes you are staffed on, drawn as a wheel.</p>
+  <p>It is a draft. <strong>Nothing has been filed, and nothing will be until you send it.</strong></p>
+  
+<figure class="fig">
+  <img src="assets/slack-weekly-card.png" alt="A message from Samay in Slack carrying a card titled Week of Oct 20 to 24, with a wheel reading 37.5h total, four projects listed with their percentages and hours, and two buttons reading Approve and File, and Open in Samay" width="1400" height="784" loading="lazy">
+  <figcaption>An illustration of the weekly card rather than a capture of your own workspace.</figcaption>
+</figure>
+  <h3>Why the first one often looks generic</h3>
+  <p>Because it has one source. With no apps connected, Samay drafts from your resource plan, which is what your team intended your week to look like rather than what it was. That is why an unconnected first week tends to come out in neat, even splits.</p>
+  <p>Connecting one app is enough to change that, and it is the step the product never prompts you for.</p>
+  <p class="onward"><a href="#connecting-your-apps">Connecting your apps</a></p>
+  <h3>A wrong first draft is worth reporting</h3>
+  <p>More than any later one. It is telling us something about how your work actually looks that we got wrong. Hover any row to see what Samay drafted that hour from, and if the reasoning does not hold up, write to <strong>support@samayapp.co</strong> and say so.</p>
+</article>
+
+<article id="what-your-organization-set-up">
+  <h2>What your organization set up for you</h2>
+  <p class="lead">Samay is not something you signed up for. It arrived configured, and most of what shapes your week was decided before you opened it.</p>
+  <p>Knowing which is which saves you correcting the same thing by hand every week when the fix belongs somewhere else.</p>
+  <h3>Decided for you</h3>
+  <dl><div><dt>How you sign in</dt><dd>Either a password you chose when you accepted your invite, or your company sign-in where your organization connected one. That was settled for the whole workspace, so it is not a preference you can switch.</dd></div><div><dt>Your job codes</dt><dd>The projects you can file against come from your organization&#39;s own system. Neither you nor your resource manager can add to that list from inside Samay, so a missing code is missing upstream.</dd></div><div><dt>Which projects you are staffed on</dt><dd>Your resource manager keeps a plan of who is on what, and for how much of their week. It is why your very first draft had hours in it before you had connected anything.</dd></div><div><dt>When your reminder goes out</dt><dd>Your administrator picks the day and time, for everyone. You cannot move it, though you can choose where it reaches you.</dd></div><div><dt>Whether anyone approves your week</dt><dd>Some organizations switch on an approver step, and then a filed week goes to a named person before it is final. Nobody approves their own. Your timesheet shows which applies, so there is nothing to work out.</dd></div><div><dt>Whether time off arrives on its own</dt><dd>If your organization connected its HR system, leave appears on your week already accounted for. If not, you add it yourself.</dd></div></dl>
+  <h3>Yours to change</h3>
+  <ul><li>Which apps Samay reads, all off until you say otherwise</li><li>What you tell it about how you work</li><li>Whether you enter hours or percentages</li><li>Your work days and usual daily hours</li><li>Which channels reach you</li></ul>
+  
+<figure class="fig">
+  <img src="assets/preferences.png" alt="Preferences, showing input mode set to hours, week start, and timezone" width="1204" height="992" loading="lazy">
+  <figcaption>Everything on this page is yours. Nothing on it affects anyone else.</figcaption>
+</figure>
+  <h3>When the draft is wrong the same way every week</h3>
+  <p>That is usually the resource plan being out of date rather than Samay misreading you. Correcting it by hand each week hides the problem instead of fixing it, so it is worth a word with your resource manager.</p>
+  <p>A code you need that is not in the list is the same shape of problem. Tell your resource manager which project you are on, or write to <strong>support@samayapp.co</strong> and we will chase it.</p>
+</article>
+
+  <div class="grp">
+    <h2 class="gh">Filing your week</h2>
+    <p class="blurb">Check it, change it, send it</p>
+  </div>
+  
+<article id="filing-from-your-channel">
+  <h2>Filing from Slack, Google Chat or email</h2>
+  <p class="lead">Most people never open Samay. The weekly message carries your drafted week, and you can read it, change it and file it where it arrived.</p>
+  
+<figure class="fig">
+  <img src="assets/three-channels.png" alt="The same Samay card shown three times: in Slack, in Google Chat, and as an email, each carrying the same wheel, the same week, and the same Approve and File and Open in Samay buttons" width="1400" height="1372" loading="lazy">
+  <figcaption>Same card, same two buttons, wherever it reaches you.</figcaption>
+</figure>
+  <h3>If the draft looks right</h3>
+  <p>File it from the message. One press, and that is the whole interaction. For most weeks it is all it needs to be.</p>
+  <h3>If something needs changing</h3>
+  <p>Reply in plain words. There is no format and no command to learn.</p>
+  <p class="quote">Move three hours from Atlas to the EV launch.</p>
+  <p class="quote">Tuesday was all client meetings.</p>
+  <p class="quote">Make the Atlas number 20 hours instead of 10.</p>
+  <p>Samay changes the week and shows you the result. Then you file it.</p>
+  <div class="note"><p>Watch the total when you are replacing a number. &quot;Make it 20 instead of 10&quot; adds 10 hours to your week unless you also say where they came from. Check the total before you file.</p></div>
+  <h3>Opening the full week instead</h3>
+  <p>Every message carries a link to your week in Samay, and it opens you already signed in. Once your invite is accepted you never type a password again to reach your own week. The link also keeps working, so a message from a few weeks ago still gets you in: it is not single use, which means a mail scanner at your company cannot burn it before you click.</p>
+  <div class="note"><p>That link is you. Anyone who can read the message can open your week, so treat a forwarded one the way you would treat a forwarded password.</p></div>
+  <p class="onward"><a href="#editing-a-week">Editing a week in Samay</a></p>
+  <h3>What the message cannot do</h3>
+  <ul><li>Add a job code that is not already in your list</li><li>Approve your own timesheet</li><li>Change which channel it arrives in, which is in Preferences</li></ul>
+</article>
+
+<article id="editing-a-week">
+  <h2>Editing a week in Samay</h2>
+  <p class="lead">Open any week and it is already drafted. This is how to read it, change it and send it.</p>
+  <h3>Pick the week</h3>
+  <p>The arrows at the top move back through previous weeks. You can draft and file a week you missed, so being behind is recoverable without anyone unlocking anything for you. Forward is blocked, because a week that has not happened has nothing to draft from.</p>
+  <h3>Read the wheel</h3>
+  <p>Each slice is a job code, and the list beside it carries the same thing as numbers with the hours on each. The total sits at the top.</p>
+  <p><strong>If you worked more than a normal week, Samay shows it as more than a normal week.</strong> It does not quietly flatten 50 hours back to 40. An over-full week is marked, not corrected.</p>
+  
+<figure class="fig">
+  <img src="assets/the-wheel.png" alt="The wheel for a drafted week, each slice labelled with its hours, and a total of 37.5 of 36 hours marked 104.2 percent and 2h over" width="1316" height="921" loading="lazy">
+  
+</figure>
+  <h3>Change what is wrong</h3>
+  <p>Two ways in, and they do the same thing. Use whichever suits the change.</p>
+  <dl><div><dt>Drag the wheel</dt><dd>Pull any edge of a slice to move hours between projects. The numbers follow as you drag. Fastest when a draft is roughly right and two codes need rebalancing.</dd></div><div><dt>Type the hours</dt><dd>Edit any number in the list directly. Best when you know exactly what a code should say.</dd></div></dl>
+  
+<figure class="fig">
+  <img src="assets/project-list.png" alt="The project list beside the wheel, each row showing its job code, client, how far it differs from the resource plan, and an editable hours field" width="1413" height="840" loading="lazy">
+  <figcaption>The difference column shows how far each row has moved from the resource plan.</figcaption>
+</figure>
+  <h3>Hours or percentages</h3>
+  <p>Hours by default, because most people think that way. If you would rather work in percentages of your week, switch it in <strong>Settings</strong>, then <strong>Preferences</strong>, or use the <strong>Edit %</strong> link on the timesheet itself. It changes what you type, not what gets filed.</p>
+  <h3>One day at a time</h3>
+  <p>If a whole week is too coarse, switch to filling a day at a time. Pick a weekday, fill it, and file just that day.</p>
+  <div class="note"><p>A filed day locks. You are filing that day, not saving a note about it, so file a day when you are finished with it rather than as you go.</p></div>
+  <h3>Ask where an hour came from</h3>
+  <p>Hover any row and Samay shows what it drafted that hour from, with its reasoning and a count of the activity it looked at. Use it when a number surprises you.</p>
+  <p class="onward"><a href="#what-samay-reads">What Samay reads, and what it doesn&#39;t</a></p>
+  <h3>Send it</h3>
+  <p>One button at the bottom, labelled <strong>Submit</strong>. Nothing is sent until you press it, and nothing files itself.</p>
+  <p>If your organization uses an approver, filing sends it to them. If not, filing is the end of it. Either way you can usually edit a filed week for a few days afterward, for a period your workspace sets, so <strong>file something approximately right rather than leaving it open while you try to remember Tuesday.</strong></p>
+  <p>If Submit will not let you, it is almost always hours Samay could not place. It says how many, and they have to be dealt with first.</p>
+  <p class="onward"><a href="#unplaced-hours">Hours Samay could not place</a></p>
+</article>
+
+<article id="time-off">
+  <h2>Time off</h2>
+  <p class="lead">Time off lowers what Samay expects of your week, so four days of work does not read as a week you underfilled.</p>
+  
+<figure class="fig">
+  <img src="assets/time-off-total.png" alt="A week total reading 33h of 32h at 103.1 percent, with a line underneath reading plus 8h time off equals a 40h week" width="830" height="220" loading="lazy">
+  <figcaption>Eight hours of time off takes the target for this week from 40 down to 32.</figcaption>
+</figure>
+  <h3>Where it comes from</h3>
+  <dl><div><dt>Your HR system</dt><dd>If your organization connected one, approved leave arrives on your week already accounted for. You do not file against it and you cannot remove it here. Correct it in the HR system and it follows.</dd></div><div><dt>Public holidays</dt><dd>Your administrator sets these for the workspace, so they are already on everyone&#39;s week. Also not removable here.</dd></div><div><dt>You</dt><dd>Anything you add by hand, which you can also take off again.</dd></div></dl>
+  <h3>Adding a day yourself</h3>
+  <ol><li><span>Open the week the day falls in.</span></li><li><span>In the panel beside your projects, add time off.</span></li><li><span>Pick the day, choose <strong>Vacation</strong>, <strong>Sick</strong> or <strong>Other time off</strong>, and set the hours. A half day is just fewer hours.</span></li></ol>
+  
+<figure class="fig">
+  <img src="assets/time-off-panel.png" alt="The time off panel reading Personal time off / holidays, 8h this week, with a row for Tuesday October 20 marked Public holiday: Vijayadasami at 8h, and an Add time off link" width="1568" height="160" loading="lazy">
+  <figcaption>A public holiday, already on the week and not removable here. Anything you add yourself sits in the same list with a control to take it off again.</figcaption>
+</figure>
+  <p>The note field is yours. It is not sent to your manager and it is not read when your week is drafted.</p>
+  <h3>If leave lands after you have filled the week in</h3>
+  <p>Samay does not overwrite hours you entered. It tells you leave arrived and offers to redraft the week around it, which is yours to accept or ignore.</p>
+</article>
+
+<article id="unplaced-hours">
+  <h2>Hours Samay could not place</h2>
+  <p class="lead">Sometimes Samay finds activity it is confident happened but cannot confidently attach to a job code. Rather than guess, it hands those hours to you.</p>
+  <h3>Why it does this instead of guessing</h3>
+  <p>A guessed hour is worse than an unplaced one. It looks settled, so nobody checks it, and it ends up in a client report. An hour Samay is unsure about is shown as unsure.</p>
+  <div class="note"><p>Unplaced hours stop you filing. Samay says how many there are and how many hours they come to, and <strong>Submit</strong> stays shut until each one is either placed or discarded. This is the one place the product deliberately gets in your way.</p></div>
+  
+<figure class="fig">
+  <img src="assets/unplaced-banner.png" alt="A strip above the timesheet reading &#39;10 unplaced items (20h). Place or discard them to file.&#39;, with Redraft this week and Discard unplaced on the right" width="1568" height="44" loading="lazy">
+  <figcaption>The message sits above your week, and Submit stays shut until the count reaches zero.</figcaption>
+</figure>
+  <h3>Dealing with them</h3>
+  <ol><li><span>Open the list from the strip above your week. The <strong>Review</strong> link on its right carries the count.</span></li><li><span>For each item, pick the job code it belongs to. Samay shows what the activity was, so you are deciding about something specific rather than about a number.</span></li><li><span>Discard anything that is not billable work at all. Discarding is a judgement, not a deletion of evidence, and the access log still shows the read happened.</span></li></ol>
+  <p>Each row names the activity, its hours and the day it fell on, and under that, the reason Samay could not place it. A row is never dropped silently. Beside it sit an <strong>Assign to</strong> list of your job codes and a <strong>Discard</strong>, and choosing a code settles that row there and then, with no second confirmation.</p>
+  <p>At the foot of the list, <strong>All remaining</strong> sends everything still unresolved to one code in a single go. When a run of unplaced activity turns out to belong to the same project, which is common, that is the quick way out rather than working down the rows.</p>
+  <h3>If none of the codes fit</h3>
+  <p>Then the code is missing upstream rather than missing from your list. Discard the item so you can file, and tell your resource manager which project you are on.</p>
+  <p class="onward"><a href="#finding-a-job-code">When you cannot find a job code</a></p>
+</article>
+
+  <div class="grp">
+    <h2 class="gh">What Samay reads</h2>
+    <p class="blurb">Everything starts switched off. Here is how to check</p>
+  </div>
+  
+<article id="connecting-your-apps">
+  <h2>Connecting your apps</h2>
+  <p class="lead">Everything starts switched off, and Samay never asks you to change that. So this is the step people skip, and then wonder why their week looks like everyone else&#39;s.</p>
+  <h3>Switching one on</h3>
+  <ol><li><span>Go to <strong>Settings</strong>, then <strong>Connected apps</strong>.</span></li><li><span>Every app reads <strong>Off, Samay reads nothing from this app</strong>. Switch on whichever you are comfortable with.</span></li><li><span>Approve the permissions your provider asks for. Samay asks for the narrowest scope that does the job, which is why the list is shorter than you might expect.</span></li></ol>
+  <p><strong>One app is enough to change the result.</strong> Calendar alone usually transforms a draft, because meetings are the part of a week that is already written down.</p>
+  
+<figure class="fig">
+  <img src="assets/connected-apps.png" alt="Connected apps, with Google Calendar switched on and its event-titles permission ticked, and Gmail, Google Drive and Slack each reading &quot;Off, Samay reads nothing from this app&quot;" width="1288" height="938" loading="lazy">
+  
+</figure>
+  <h3>Switching one back off</h3>
+  <p>Turn the toggle off and Samay stops reading that app from that moment. Weeks already drafted stay as they are, and you can edit them like any other week.</p>
+  <h3>Before you decide</h3>
+  <p>The next page is the honest version of what each app hands over, and the record you can check it against. It is worth reading before you switch anything on rather than after.</p>
+  <p class="onward"><a href="#what-samay-reads">What Samay reads, and what it doesn&#39;t</a></p>
+</article>
+
+<article id="what-samay-reads">
+  <h2>What Samay reads, and what it doesn&#39;t</h2>
+  <p class="lead">This is the page worth reading properly. It says what Samay can see, what it cannot, and how to check rather than take our word for it.</p>
+  <h3>What each app gives Samay</h3>
+  <dl><div><dt>Calendar</dt><dd>Event times, durations, titles, and who was there. Not the contents of an invitation.</dd></div><div><dt>Mail</dt><dd>Who a message was with, when, and the subject line. Never the body. Samay uses it to tell that you spent Thursday on a client thread, not to read the thread.</dd></div><div><dt>Files</dt><dd>The names of files you touched during the week being drafted. Never what is inside them, never your drive as a whole, and only the week in question.</dd></div><div><dt>Slack or Google Chat</dt><dd>Which channels you were active in. Not the messages.</dd></div></dl>
+  <h3>What it never does</h3>
+  <ul><li><strong>Run on your machine.</strong> There is nothing to install and nothing watching your screen</li><li><strong>Track you in real time.</strong> It looks at the week it is drafting, when it drafts it, and that is the whole of its interest</li><li><strong>Keep the raw material.</strong> Activity is used to build the draft and then discarded. What is kept is the timesheet, for a period your organization sets</li></ul>
+  <h3>Checking, rather than believing</h3>
+  <p>On the same page there is an <strong>Access log</strong>. It lists every read Samay has made, dated, naming the app and the scope.</p>
+  <p class="quote">Samay read Calendar (event titles, attendees) on Oct 20</p>
+  <p>It fills in as runs happen, including runs you triggered yourself. <strong>If an app is off and its name never appears, that is the proof.</strong></p>
+  
+<figure class="fig">
+  <img src="assets/access-log.png" alt="The access log, listing dated reads that name their scope, from calendar event titles alone to a run across calendar, mail, files and chat" width="1204" height="981" loading="lazy">
+  
+</figure>
+  <p>A row marked as failed means a read was attempted and did not complete, usually because a connection expired. <strong>It does not mean something was taken.</strong> If failed rows keep appearing, write to <strong>support@samayapp.co</strong> and we will look at the connection.</p>
+  <h3>Where a particular hour came from</h3>
+  <p>More useful day to day than the log: hover any row on your timesheet and Samay shows what it drafted that hour from, with its reasoning and a count of the activity behind it. That is the honest test of this whole thing. If the reasoning does not hold up, we want to know.</p>
+  <h3>What your manager can see</h3>
+  <p>Whether you filed, and the hours you filed against job codes. <strong>Not where any of it came from.</strong> Not your calendar, not your mail, not your files. The same thing they would see from any timesheet.</p>
+</article>
+
+  <div class="grp">
+    <h2 class="gh">Settings and help</h2>
+    <p class="blurb">What you can change, and where to write when something is wrong</p>
+  </div>
+  
+<article id="your-preferences">
+  <h2>Your preferences</h2>
+  <p class="lead">In <strong>Settings</strong>, then <strong>Preferences</strong>. None of it affects anyone else, and all of it changes how your week is drafted.</p>
+  <h3>How you work</h3>
+  <p>The one worth spending a minute on. A box where you write, in plain words, the things a calendar cannot show: which days are heads-down, what a recurring block actually is, how a kind of work maps to a project.</p>
+  <p class="quote">Mondays are deep work on the Atlas rebrand. Standups are 15 minutes, not the half hour they are booked for. Anything with Finance in the title is internal.</p>
+  <p>It is read every time your week is drafted, alongside your connected apps and your staffed job codes.</p>
+  
+<figure class="fig">
+  <img src="assets/how-you-work.png" alt="The How you work box, showing the kind of sentence to write in it" width="1360" height="642" loading="lazy">
+  
+</figure>
+  <h3>The rest</h3>
+  <dl><div><dt>Input mode</dt><dd>Hours or percentages. Hours is the default because most people think that way. It changes what you type, not what gets filed.</dd></div><div><dt>Week start</dt><dd>The day your timesheet week begins.</dd></div><div><dt>Timezone</dt><dd>Decides which day is today and which week is this week, on the timesheet and in your channel. Worth checking if you have moved.</dd></div><div><dt>Work days and daily hours</dt><dd>What a normal week is for you. Samay drafts against it, so a four-day week set here stops Friday reading as a gap.</dd></div><div><dt>Hour types</dt><dd>Which way a draft leans when time could be client work or internal work.</dd></div><div><dt>Reminders</dt><dd>Which channels reach you. Only the ones your workspace has connected are offered. At least one stays on, and only an administrator can switch you off entirely.</dd></div></dl>
+  
+<figure class="fig">
+  <img src="assets/preferences.png" alt="Preferences, showing input mode set to hours, week start, and timezone" width="1204" height="992" loading="lazy">
+  
+</figure>
+</article>
+
+<article id="getting-help">
+  <h2>Getting help</h2>
+  <p class="lead"><strong>support@samayapp.co.</strong> A person answers, usually the same day, and you can also just reply to any email Samay sends you.</p>
+  <p>Two things in the message save a round trip almost every time: which week you are looking at, and what you expected to see instead.</p>
+  <h3>Support and feedback are different, and we want both</h3>
+  <p>Support is &quot;this is broken&quot;. Feedback is &quot;this is irritating and I have started working around it&quot;. The second is harder to get and worth more. <strong>Send feedback</strong> in your account menu goes straight to the people building Samay.</p>
+  <h3>Things we already know about</h3>
+  <dl><div><dt>Your first draft looks generic</dt><dd>Nothing is connected, so Samay is drafting from your resource plan alone.</dd></div><div><dt>A job code you need is not in the list</dt><dd>It comes from your organization&#39;s own system, so it has to be added there.</dd></div><div><dt>Hours in a reply did not come out as expected</dt><dd>Replacing a number adds to your total unless you say where the hours came from. Check the total before you file.</dd></div><div><dt>You cannot press Submit</dt><dd>Almost always hours Samay could not place. It says how many, and they have to be placed or discarded first.</dd></div></dl>
+  <h3>If your timesheet looks wrong</h3>
+  <p>File it anyway, if it is close. An approximately right timesheet filed on Friday is worth more than a perfect one filed in three weeks, and a filed week can usually still be edited for a few days.</p>
+  <p>Then tell us what was wrong. A draft that reads wrong is the single most useful report we get.</p>
+</article>
+
+  <div class="grp">
+    <h2 class="gh">Coming soon</h2>
+    <p class="blurb">Things people ask for that are not built yet</p>
+  </div>
+  
+<article id="finding-a-job-code">
+  <h2>When you cannot find a job code <span class="soon">Not built yet</span></h2>
+  <p class="lead">Asking for a missing job code without leaving your timesheet is being built. Today it takes one message to a person.</p>
+  <h3>What to do now</h3>
+  <ol><li><span>Put the hours somewhere defensible so you can file. The closest code is better than leaving the week open, and you can correct it later.</span></li><li><span>Tell your resource manager which project you are working on, and that it has no code. They add it in your organization&#39;s own system, which is where the list comes from.</span></li><li><span>If you are not sure who that is, write to <strong>support@samayapp.co</strong> and we will find out.</span></li></ol>
+  <h3>Why it is not just a button</h3>
+  <p>Your job codes are owned by your finance or operations system, not by Samay. A code invented inside Samay would not exist where the invoice is raised, so the request has to reach that system. What we are building is the asking, not the inventing.</p>
+  <p class="onward"><a href="#what-your-organization-set-up">Where your job codes come from</a></p>
+</article>
+
+<article id="using-your-voice">
+  <h2>Using your voice to fill a timesheet <span class="soon">Not built yet</span></h2>
+  <p class="lead">Describing your week out loud and having Samay lay it out for you is being built. It is not switched on for early access.</p>
+  <h3>The nearest thing today</h3>
+  <p>Replying to the weekly message in plain words does most of the same job, and it works now. You still type, but you do not have to find a field or learn a format.</p>
+  <p class="quote">Tuesday and Wednesday were both the EV launch. Thursday was half Atlas, half internal.</p>
+  <p class="onward"><a href="#filing-from-your-channel">Filing from Slack, Google Chat or email</a></p>
+  <h3>If you would use this</h3>
+  <p>Tell us. Voice is the feature where we most want to hear from people who would actually use it before we finish building it, rather than after. <strong>support@samayapp.co</strong>.</p>
+</article>
+
+<article id="starting-a-week-over">
+  <h2>Starting a week over <span class="soon">Not built yet</span></h2>
+  <p class="lead">Wiping a week and redrafting it from scratch is not something you can do yourself yet. What you can do depends on whether the week has been filed.</p>
+  <h3>A week still in draft</h3>
+  <p>Nothing is locked, so you can change every number by hand. Set the rows you want and leave the rest at zero. It is more clicks than one button, but nothing is stopping you.</p>
+  <div class="note"><p>If Samay offers to redraft the week, that offer appears when your resource plan has changed, not as a general reset. Accepting it rebuilds the week from the new plan and replaces what you entered.</p></div>
+  <h3>A week already filed</h3>
+  <p>You can usually still edit it for a few days after filing, for a period your workspace sets, and that covers most corrections.</p>
+  <p>Past that window the week is closed to you, and an administrator has to reopen it. That is deliberate rather than an oversight: a filed week may already have gone to your finance system, and reopening it there is a separate step someone has to take.</p>
+  <h3>What to do today</h3>
+  <ol><li><span>If the week is in draft, edit the numbers directly.</span></li><li><span>If it is filed and recent, open it and edit it.</span></li><li><span>If it is filed and old, ask your administrator to reopen it, and say which week.</span></li></ol>
+  <p class="onward"><a href="#editing-a-week">Editing a week in Samay</a></p>
+</article>
+
+  <footer>
+    <p>These pages mirror the help center inside Samay. Sign in at <a href="https://app.samayapp.co">app.samayapp.co</a> to read them there, where they are filtered to what your own account can do.</p>
+    <p>Something here wrong, or missing? Write to <a href="mailto:support@samayapp.co">support@samayapp.co</a>.</p>
+  </footer>
+</div>
+</body>
+</html>

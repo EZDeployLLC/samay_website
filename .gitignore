@@ -22,3 +22,6 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Scratch dir for scripts/build-help.mjs
+.help-build/

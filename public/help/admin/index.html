@@ -1,0 +1,367 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Running Samay at your agency · Samay</title>
+<meta name="description" content="For the person who sets Samay up and the people who approve timesheets. Job codes, the resource plan, reminders, reporting, and what to do when a filed wee">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+:root{--ink:#2e2e2b;--body:#4b4a48;--muted:#a09a92;--green:#1f513f;--line:#e8e5e0;--page:#f4f2ed}
+html{scroll-behavior:smooth}
+body{background:var(--page);color:var(--body);font-family:'Inter',-apple-system,BlinkMacSystemFont,sans-serif;-webkit-font-smoothing:antialiased;line-height:1.75}
+.wrap{max-width:720px;margin:0 auto;padding:0 16px 120px}
+header.top{padding:56px 0 8px}
+.mark{font-family:'Playfair Display',Georgia,serif;font-weight:700;font-size:15px;letter-spacing:.15em;color:var(--ink);text-decoration:none;display:inline-block;margin-bottom:34px}
+h1{font-family:'Playfair Display',Georgia,serif;font-size:40px;font-weight:700;line-height:1.12;color:var(--ink);margin-bottom:14px;letter-spacing:-.01em}
+.intro{font-size:16.5px;line-height:1.6;margin-bottom:22px}
+.switch{font-size:14px;color:var(--muted);padding-bottom:34px;border-bottom:1px solid var(--line)}
+.switch a{color:var(--green);font-weight:500}
+nav.toc{padding:34px 0 10px}
+nav.toc h2{font-family:'Inter',sans-serif;font-size:11px;font-weight:600;letter-spacing:.09em;text-transform:uppercase;color:var(--muted);margin-bottom:18px}
+nav.toc section{margin-bottom:20px}
+nav.toc .g{font-family:'Playfair Display',Georgia,serif;font-size:16px;font-weight:700;color:var(--ink);margin-bottom:6px}
+nav.toc ul{list-style:none;padding:0}
+nav.toc li{margin-bottom:3px}
+nav.toc a{font-size:14.5px;color:var(--body);text-decoration:none;border-bottom:1px solid transparent}
+nav.toc a:hover{border-bottom-color:var(--green);color:var(--green)}
+.grp{margin-top:72px;padding-top:26px;border-top:1px solid var(--line)}
+.grp h2.gh{font-family:'Playfair Display',Georgia,serif;font-size:28px;font-weight:700;color:var(--ink);line-height:1.2;margin-bottom:6px}
+.grp .blurb{font-size:15px;color:var(--muted);margin-bottom:8px}
+article{padding-top:46px}
+article h2{font-family:'Playfair Display',Georgia,serif;font-size:30px;font-weight:700;line-height:1.15;color:var(--ink);margin-bottom:20px;letter-spacing:-.005em;scroll-margin-top:20px}
+.soon{display:inline-block;vertical-align:middle;font-family:'Inter',sans-serif;font-size:11px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:#8a5a12;background:#fdf3e1;border:1px solid #ecd9ad;border-radius:999px;padding:3px 9px;margin-left:8px;position:relative;top:-3px}
+article h3{font-family:'Playfair Display',Georgia,serif;font-size:21px;font-weight:700;line-height:1.3;color:var(--ink);margin:44px 0 14px}
+article h4{font-size:15px;font-weight:600;color:var(--ink);margin:30px 0 10px}
+p{font-size:15px;line-height:1.75;margin-bottom:18px}
+p.lead{font-size:16.5px;line-height:1.6;margin-bottom:26px}
+strong{font-weight:600;color:var(--ink)}
+ol{margin:0 0 22px;padding-left:24px}
+ol li{margin-bottom:16px;padding-left:4px;font-size:15px;font-weight:600;color:var(--ink)}
+ol li span{display:block;font-weight:400;line-height:1.7;color:var(--body)}
+ul{margin:0 0 22px;padding-left:22px}
+ul li{margin-bottom:7px;padding-left:3px;font-size:15px;line-height:1.75}
+dl{margin:0 0 22px}
+dl>div{margin-bottom:14px}
+dt{font-size:15px;font-weight:600;color:var(--ink);margin-bottom:3px}
+dd{font-size:15px;line-height:1.65;margin:0}
+.note{border-left:2px solid var(--green);padding:3px 0 3px 16px;margin:0 0 22px}
+.note p{line-height:1.65;margin:0}
+.quote{font-size:14.5px;line-height:1.6;background:#fff;border:1px solid var(--line);border-radius:5px;padding:12px 15px;margin-bottom:14px}
+.fig{margin:4px 0 24px}
+.fig.instep{margin:12px 0 4px}
+.fig img{display:block;max-width:100%;height:auto;border:1px solid var(--line);border-radius:5px;background:#fff}
+figcaption{font-size:12.5px;line-height:1.5;color:var(--muted);margin-top:8px}
+.slot{margin:4px 0 24px;border:1px solid var(--line);border-radius:5px;background:#faf9f6;padding:26px 20px}
+.slot figcaption{font-size:11px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;margin:0 0 6px}
+.slot p{font-size:13px;line-height:1.55;color:#6b6560;margin:0}
+.onward{margin-bottom:20px}
+.onward a{font-size:15px;font-weight:500;color:var(--green);text-decoration:none;border-bottom:1px solid rgba(31,81,63,.25)}
+.away{font-size:13px;color:var(--muted)}
+footer{margin-top:84px;padding-top:30px;border-top:1px solid var(--line);font-size:14px;color:var(--muted)}
+footer a{color:var(--green)}
+footer p{font-size:14px;margin-bottom:10px}
+@media (max-width:640px){h1{font-size:31px}article h2{font-size:25px}article h3{font-size:19px}.grp h2.gh{font-size:23px}header.top{padding-top:34px}}
+@media print{body{background:#fff}.switch,nav.toc{display:none}article{page-break-inside:auto}article h2{page-break-after:avoid}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <a class="mark" href="/">SAMAY</a>
+    <h1>Running Samay at your agency</h1>
+    <p class="intro">For the person who sets Samay up and the people who approve timesheets. Job codes, the resource plan, reminders, reporting, and what to do when a filed week has to be opened again.</p>
+    <p class="switch">Looking for <a href="../">Help with Samay</a>? It is on its own page.</p>
+  </header>
+
+  <nav class="toc">
+    <h2>On this page</h2>
+    
+    <section>
+      <div class="g">Setting up your organization</div>
+      <ul><li><a href="#setting-up-your-workspace">Setting up your workspace</a></li><li><a href="#your-team">Your team</a></li><li><a href="#job-codes">Job codes</a></li><li><a href="#the-resource-plan">The resource plan</a></li><li><a href="#workspace-integrations">Integrations</a></li><li><a href="#reminders">Reminders</a></li><li><a href="#public-holidays">Public holidays</a></li><li><a href="#after-a-week-is-filed">After a week is filed</a></li></ul>
+    </section>
+    <section>
+      <div class="g">Reporting</div>
+      <ul><li><a href="#filing-status">Filing status</a></li><li><a href="#utilization">Utilization</a></li><li><a href="#agency-breakdown">Agency breakdown</a></li></ul>
+    </section>
+    <section>
+      <div class="g">Approvals</div>
+      <ul><li><a href="#approving-timesheets">Approving timesheets</a></li></ul>
+    </section>
+  </nav>
+
+  
+  <div class="grp">
+    <h2 class="gh">Setting up your organization</h2>
+    <p class="blurb">Codes, people, the plan, and the rules everyone files under</p>
+  </div>
+  
+<article id="setting-up-your-workspace">
+  <h2>Setting up your workspace</h2>
+  <p class="lead">A card on your home page tracks this, reading <strong>Finish setting up Samay</strong> with a count of the steps done. It is derived from your workspace as it stands, not from a box someone ticked, so it is accurate even if you did the work months ago.</p>
+  <h3>The order matters</h3>
+  <ol><li><span><strong>Add your job codes.</strong> Nothing else works without them. A person with no codes has nothing to file against.</span></li><li><span><strong>Build your resource plan.</strong> This is what lets Samay draft a week for someone who has connected nothing, which is most people in week one.</span></li><li><span><strong>Connect apps so Samay can draft.</strong> Marked optional, and it is, but a workspace that skips it gets drafts built from the plan alone.</span></li></ol>
+  <div class="note"><p>Doing step two before step one is the common mistake. The resource plan allocates people to codes, so with no codes there is nothing to allocate them to.</p></div>
+  <h3>The rules everyone files under</h3>
+  <p>These live on <strong>Admin</strong>, then <strong>General</strong>, and apply to every person in the workspace.</p>
+  <dl><div><dt>Standing instructions for Samay</dt><dd>What is true of your agency that no calendar shows. House conventions, what a recurring internal block is, how a kind of work maps to a code. Each person can add their own on top.</dd></div><div><dt>Timesheet approvals</dt><dd>On or off for the workspace. On, and a filed week goes to a named approver first.</dd></div><div><dt>Editing after filing</dt><dd>How long someone can still change a week after sending it. Worth setting deliberately: it is the difference between people filing on Friday and people waiting until they are certain.</dd></div><div><dt>Public holidays</dt><dd>Days off for the whole workspace, which arrive on everyone&#39;s week already accounted for.</dd></div></dl>
+  
+<figure class="fig">
+  <img src="../assets/approvals-flow.png" alt="The Timesheet approvals card switched on, showing the path a week takes: Filed, then Approver, then Locked" width="1370" height="330" loading="lazy">
+  <figcaption>With approvals on, a filed week is not final until someone else has seen it.</figcaption>
+</figure>
+  <p class="onward"><a href="#after-a-week-is-filed">What the editing window actually controls</a></p>
+  <h3>Then let people in</h3>
+  <p>The setup card stops at drafting, and there is one step past it: nobody can sign in until the invites go out. Leaving it until last is right, because an invite that arrives before the job codes exist walks someone into an empty week.</p>
+  <p class="onward"><a href="#your-team">Sending the invites</a></p>
+</article>
+
+<article id="your-team">
+  <h2>Your team</h2>
+  <p class="lead">On <strong>Admin</strong>, then <strong>Team</strong>. Everyone who files, plus the people who only ever see Samay in a channel.</p>
+  <h3>Two kinds of member</h3>
+  <dl><div><dt>A person with an account</dt><dd>They sign in, set their own preferences, and connect their own apps.</dd></div><div><dt>A channel-only person</dt><dd>No account. Their week is drafted and sent to them, and they file from the message. For someone who would never open a browser tab for this, it is the whole product.</dd></div></dl>
+  <p>Each person also has a filing link you can send directly, which signs them in without a password.</p>
+  <h3>Getting everyone in</h3>
+  <p>Nobody can sign in until they have been invited, and being on this page is not the same as having been. Adding a person by hand offers to invite them there and then; leave that off, or bring people in through the resource plan import, and they sit on the list uninvited until you decide otherwise.</p>
+  <p>That separation is useful. You can build the whole list quietly, check it, and then let everyone in at once.</p>
+  <p>A row reading <strong>Not invited</strong> has never been emailed. <strong>Send invites</strong> in the toolbar counts how many of those there are and emails them together, asking you to confirm once first, because it reaches real people. Someone who has lost theirs gets <strong>Resend invite</strong> on their own row.</p>
+  <p>What lands in their inbox depends on the sign-in you connected: their company account where you set one up, a password they choose where you did not.</p>
+  <p class="onward"><a href="#workspace-integrations">Setting up sign-in</a></p>
+  <div class="note"><p>Choose the moment deliberately. For most people this invite is the first thing Samay has ever sent them, and a Monday morning gives them a week to act on it.</p></div>
+  <h3>Who can approve</h3>
+  <p>A checkbox per person, separate from being an administrator. That is deliberate: a team lead usually approves and usually should not have the keys to your job codes.</p>
+  <div class="note"><p>Nobody approves their own timesheet, and that is not configurable. If you are the only approver, your own weeks go to someone else.</p></div>
+  <h3>The cap</h3>
+  <p>Early access covers up to 25 users. <strong>Administrator accounts are not counted against it</strong>, so putting yourself and your operations lead in costs you nothing.</p>
+  <h3>Setting a person up for a good first week</h3>
+  <p>Two things on their row are worth doing before they start, and both are invisible to them: confirm the channel they will be reached on, and add any standing instruction specific to how they work. A person whose first draft looks right rarely needs anything else from you.</p>
+  
+<figure class="fig">
+  <img src="../assets/team-table.png" alt="The Team table listing members with their email, role of Admin or Creative, last active date, date added, and a tick in the Admin column for administrators" width="1568" height="586" loading="lazy">
+  <figcaption>Last active is the column worth scanning in week one. Not invited means they have never been reached.</figcaption>
+</figure>
+</article>
+
+<article id="job-codes">
+  <h2>Job codes</h2>
+  <p class="lead">Your job codes are the one thing Samay will not invent. Everything a person can file against comes from this list.</p>
+  <h3>Typed in, or pulled from the system that already has them</h3>
+  <p>On <strong>Admin</strong>, then <strong>Job codes</strong>, you choose how the list is kept. There are two ways to run it and you pick one: maintain the codes inside Samay by hand, or connect the system your agency already holds them in and let Samay pull them.</p>
+  <p>Manual entry is the live option today, and you maintain the list in the code library further down the page. <strong>Accountability</strong> and <strong>Workamajig</strong> are the connected sources being built, and both currently read <strong>Coming soon</strong>. That is the state of the connector rather than something you have failed to configure.</p>
+  
+<figure class="fig">
+  <img src="../assets/code-source.png" alt="The Code source card with Manual entry marked as the active source, and Accountability and Workamajig below it both marked Coming soon" width="1370" height="746" loading="lazy">
+  
+</figure>
+  <h3>The same choice, asked twice</h3>
+  <p>The page splits this across two cards, and that is the one thing about it that catches people out. <strong>Code source</strong>, above, is the codes themselves and their close dates. <strong>Project details</strong>, below it, is where each code gets its project name and the people on it, which in most agencies comes from a resourcing tool rather than the finance system.</p>
+  <p>Both work the same way, by hand or from a connected source. Project details is the one carrying the spreadsheet options.</p>
+  <dl><div><dt>Manual entry</dt><dd>Maintain names and people inside Samay. Fine for a short list that rarely moves.</dd></div><div><dt>Google Sheets</dt><dd>A live sync, so the sheet stays the thing people edit. The best fit for most agencies in early access.</dd></div><div><dt>CSV upload</dt><dd>A .csv or .xlsx export, re-uploaded whenever it changes. Simple, and it is only as current as the last upload.</dd></div></dl>
+  <p>monday.com and ClickUp are listed here as coming soon. A counter above the options reads how many of your codes are mapped to a project, and anything unmapped is a code people can file against with no project name beside it.</p>
+  
+<figure class="fig">
+  <img src="../assets/project-details.png" alt="The Project details card reading 17 of 17 codes mapped to a project, with Manual entry active and Google Sheets, CSV upload, monday.com and ClickUp listed below" width="1148" height="1046" loading="lazy">
+  <figcaption>The two cards sit one above the other, which is why they get confused. This is the lower one.</figcaption>
+</figure>
+  <h3>Closing a code instead of deleting it</h3>
+  <p>A code carries a close date. Setting one takes it out of the list people can pick from without touching the weeks already filed against it. Deleting a live code is how a filed timesheet loses its project.</p>
+  <h3>The code library</h3>
+  <p>Everything Samay has ever seen from your source, including codes nobody is staffed on. Use it when someone says a project is missing: often it is here and simply not on their plan, which is a different fix.</p>
+</article>
+
+<article id="the-resource-plan">
+  <h2>The resource plan</h2>
+  <p class="lead">This is the highest-leverage page in the product. It is what Samay drafts from when a person has connected nothing, which is almost everyone in their first week.</p>
+  <h3>What it holds</h3>
+  <p>An allocation per person per job code, with a date range on each. A person on two projects at 60 and 40 gets a first draft split that way, before any calendar is read.</p>
+  <p>It is kept the same way the job codes are: by hand, or from a system you connect. By hand means editing in place, or importing the whole thing from a spreadsheet, and the import takes CSV and Excel, matches rows to people you already have, and offers a template so the column names are not a guessing game.</p>
+  <p>Connected means binding the plan to a source and letting it sync, which is the better answer once the plan moves weekly. <strong>Google Sheets</strong> is the live option, and it can run both ways, so a change made in Samay goes back to the sheet, though a sheet laid out awkwardly enough will be pull-only. Workamajig, NetSuite and monday.com are the sources being built.</p>
+  <div class="note"><p>A sync that starts failing says so on the Integrations page, on the row of the system it pulls from. It does not announce itself here, which is worth knowing before a plan quietly stops updating.</p></div>
+  <h3>The two filters worth knowing</h3>
+  <ul><li><strong>Over capacity</strong>, people allocated past a full week. Usually a planning error rather than a real one</li><li><strong>Unstaffed</strong>, people on nobody&#39;s project. Their drafts will come out empty and they will be the ones who write to you</li></ul>
+  <p>There is also a load panel per person, which is the fastest way to answer the question a resource manager actually asks, which is whether someone has room.</p>
+  <h3>Keeping it current is the whole job</h3>
+  <p>A stale plan does not announce itself. It shows up as people quietly correcting the same two rows every week, which they will do rather than tell you.</p>
+  <div class="note"><p>When the plan changes, Samay does not overwrite hours someone has already entered. It tells them the plan moved and offers to redraft, which they can take or ignore.</p></div>
+  
+<figure class="fig">
+  <img src="../assets/resource-plan.png" alt="A client group in the resource plan showing one job code allocated at 105 percent across four people, one of them marked channel-only and one marked over capacity, each with a date range" width="1568" height="215" loading="lazy">
+  <figcaption>The red percentage is the code over-allocated across everyone on it.</figcaption>
+</figure>
+</article>
+
+<article id="workspace-integrations">
+  <h2>Integrations</h2>
+  <p class="lead">On <strong>Admin</strong>, then <strong>Integrations</strong>. Two different things live here, and only one of them blocks a rollout.</p>
+  <h3>Notification channels, which do block a rollout</h3>
+  <p>Slack, Google Chat and email. <strong>Until one is connected, nobody can be reached</strong>, and the weekly nudge has nowhere to go. This is the single most common reason a workspace is set up and nothing appears to happen.</p>
+  <p>Your people cannot do this themselves, and nothing in their settings suggests they could. They choose among the channels you connect; they never connect one.</p>
+  <div class="note"><p>If a person says Samay never reaches them, check this before checking anything on their account. Nine times in ten it is here.</p></div>
+  
+<figure class="fig">
+  <img src="../assets/notification-channels.png" alt="Three notification channels: Slack marked Connected, and Google Chat and Email each marked Error with Manage and Disconnect beside them" width="1568" height="461" loading="lazy">
+  <figcaption>A channel can be connected and still failing. Error means messages are not arriving.</figcaption>
+</figure>
+  <p>A channel showing <strong>Error</strong> is worse than one that was never connected, because nothing else in the product reflects it. Your nudge schedule still lists the channel. Your people still see it switched on in their own preferences. The message simply stops arriving, and this row is the only place that says so. It names what failed, and <strong>Manage</strong> is where you fix it.</p>
+  <p class="onward"><a href="#reminders">Setting when the nudge goes out</a></p>
+  <h3>Sign-in</h3>
+  <p>Settle this before the invites go out, because it decides what every person meets on the day they accept. Under <strong>Sign-in and identity</strong> you can connect <strong>Google Workspace</strong>, <strong>Okta</strong>, or a generic SAML setup. Connect one and your people accept with their company account and never hold a Samay password. Connect none and they choose a password instead, which is an ordinary way to run it rather than a lesser one.</p>
+  <p>A workspace has one single sign-on connection, not several. Once one is set up the other tiles stop offering a second and report which is in use instead. Google Workspace sits beside single sign-on rather than instead of it, so a workspace can carry both.</p>
+  <p>If you are not sure which applies to your firm, that is a question for us rather than something to settle from this page.</p>
+  <h3>The rest, most of which is not ready</h3>
+  <p>The connectors to finance, operations and resourcing systems are listed and most read <strong>Coming soon</strong>. That is the honest state rather than something you have failed to configure.</p>
+  <p>Where a connector is not available the fallback is a spreadsheet, and for early access that is the expected path rather than a workaround.</p>
+</article>
+
+<article id="reminders">
+  <h2>Reminders</h2>
+  <p class="lead">Set on <strong>Admin</strong>, then <strong>General</strong>, under <strong>Nudges</strong>. Your people choose which channel reaches them; they cannot move the day.</p>
+  <h3>The weekly card, and whatever you add on top of it</h3>
+  <p>One send runs on its own. Everything else on this page is yours to add.</p>
+  <dl><div><dt>The weekly card</dt><dd>The drafted timesheet itself, going to everyone on the day and time you set. Friday morning for the week just ending is the usual choice. Set it once and it keeps going.</dd></div><div><dt>A reminder you add</dt><dd>A chase about a week nobody has filed, which you create. Each one carries its own day, time, and which week it refers to, and you can have as many as the rollout needs. Monday morning about last week is the common first one.</dd></div></dl>
+  <p>Every row has a <strong>Send now</strong> beside it, so a reminder can go out by hand without waiting for the day it is set to.</p>
+  
+<figure class="fig">
+  <img src="../assets/nudges.png" alt="The Nudges card with Slack selected as the channel, scheduled sends on, a weekly card set to Friday 09:00 for this week, and a reminder set to Monday 09:00 for last week" width="1232" height="968" loading="lazy">
+  
+</figure>
+  <h3>Choosing when</h3>
+  <p>Friday morning is the common choice and it is a reasonable default. The argument against it is that a Friday nudge catches people who have already left for the week, and a Monday one asks them to remember the week before.</p>
+  <p>Whatever you choose, say it in your launch message. A nudge that arrives unannounced reads like a system error to about a third of people.</p>
+  <div class="note"><p>If no channel is connected, the schedule has nowhere to deliver and the page tells you so. Connect a channel first, or nothing goes out.</p></div>
+  <h3>Chasing one person</h3>
+  <p>From <strong>Reporting</strong>, on the filing status tab, you can nudge everyone who has not filed that week. It goes out on the channels your workspace has connected.</p>
+  <p>Use it sparingly. The weekly nudge is a routine people stop noticing in a good way; a manual chase is a message from a person and lands like one.</p>
+  
+<figure class="fig">
+  <img src="../assets/reporting-controls.png" alt="The reporting tabs with a week selector, an Export CSV control, and a button reading Nudge everyone not filed with a count of sixteen" width="1420" height="318" loading="lazy">
+  <figcaption>The manual chase lives on the filing status report, not here.</figcaption>
+</figure>
+</article>
+
+<article id="public-holidays">
+  <h2>Public holidays</h2>
+  <p class="lead">Set on <strong>Admin</strong>, then <strong>General</strong>. A holiday you add arrives on everyone&#39;s week already accounted for, and none of them has to do anything about it.</p>
+  <h3>What it changes</h3>
+  <p>It lowers the target for that week. A week with one public holiday expects 32 hours rather than 40, so a person who worked their normal four days is not shown as having underfilled.</p>
+  <p>Your people cannot remove a holiday from their own week, which is the point. It is a workspace fact, not a personal one.</p>
+  <h3>Worth doing before go-live, not after</h3>
+  <p>A holiday added late does not retroactively settle the weeks people already filed. Loading the year in one sitting is five minutes and removes a whole category of question.</p>
+  <p>If you have offices in more than one country, be aware this list is workspace-wide. A holiday that applies to one office applies to everyone, so for a split calendar the per-person route is the better fit for now.</p>
+  
+<figure class="fig">
+  <img src="../assets/public-holidays.png" alt="The Public holidays card with a date field, a name field, a full-day or part-day selector, and four holidays already added, two full day and two at four hours" width="1370" height="774" loading="lazy">
+  <figcaption>A holiday can be a half day. Four hours lowers the week by four, not eight.</figcaption>
+</figure>
+  <p class="onward"><a href="../#time-off">How time off looks to the person</a> <span class="away">on the other page</span></p>
+</article>
+
+<article id="after-a-week-is-filed">
+  <h2>After a week is filed</h2>
+  <p class="lead">Filing is not quite final, and how final it is depends on a setting you control.</p>
+  <h3>The editing window</h3>
+  <p>On <strong>Admin</strong>, then <strong>General</strong>, the <strong>Editing after filing</strong> card sets how long someone can still change a week after sending it. Inside the window they edit it themselves and you never hear about it.</p>
+  
+<figure class="fig">
+  <img src="../assets/editing-after-filing.png" alt="The Editing after filing card, switched on and reading allow edits for 7 days after filing" width="1370" height="392" loading="lazy">
+  
+</figure>
+  <p>A short window gets you cleaner numbers sooner. A longer one gets you more weeks filed on time, because people will send something approximately right if they know they can fix it. For early access the second is usually worth more.</p>
+  <h3>Reopening a closed week</h3>
+  <p>Past the window, a person cannot reopen their own week and must ask you. You reopen it and Samay tells them it is open again.</p>
+  <p>The friction is deliberate rather than an oversight. A filed week may already have gone to your finance system, and unlocking it there is a separate step somebody has to take. A reopen in Samay alone does not do it.</p>
+  <div class="note"><p>Record why when you reopen. In four weeks you will be asked how often this happened and for what, and a reason on each is the difference between an answer and a guess.</p></div>
+  
+<figure class="fig">
+  <img src="../assets/reopen-dialog.png" alt="The Reopen a filed week dialog, with the reason It was unlocked in the ERP selected, an Unlocked in list reading Your finance system, an optional note field, and the message the person will receive written out underneath" width="980" height="1213" loading="lazy">
+  <figcaption>The grey text is the message that reaches them, shown in full before you send it.</figcaption>
+</figure>
+  <p>The reason you pick writes the message. <strong>It was unlocked in the ERP</strong> asks which system, and the note field is yours to add a specific instruction to, which is worth doing when the correction is one line rather than a whole week.</p>
+</article>
+
+  <div class="grp">
+    <h2 class="gh">Reporting</h2>
+    <p class="blurb">Who has filed, how the week was spent, and where the hours went</p>
+  </div>
+  
+<article id="filing-status">
+  <h2>Filing status</h2>
+  <p class="lead">The first tab on <strong>Reporting</strong>, and the one you will open most. One week at a time, with arrows to move back.</p>
+  <h3>Reading it</h3>
+  <p>Everyone in the workspace, and whether their week is in. A reopened week is marked as such, with the note recorded when it was reopened.</p>
+  <p>It opens on the current week, which during that week is mostly a list of people who have not filed yet. That is expected rather than alarming: look at it the Monday after.</p>
+  <h3>Two things you can do from here</h3>
+  <ul><li><strong>Remind everyone who has not filed</strong>, which goes out on the channels your workspace has connected</li><li><strong>Export CSV</strong>, a file of who filed what for that week, which is how the numbers leave Samay</li></ul>
+  <div class="note"><p>The export is per week. There is no range export yet, so a four-week readout is four files.</p></div>
+  
+<figure class="fig">
+  <img src="../assets/reporting-controls.png" alt="The three reporting tabs with a week selector, reading filing status this week, 0 of 16 filed, with Export CSV and a nudge-everyone button" width="1420" height="318" loading="lazy">
+  
+</figure>
+</article>
+
+<article id="utilization">
+  <h2>Utilization</h2>
+  <p class="lead">What you planned for someone against what they filed. The gap between those two columns is the thing this report exists to show.</p>
+  <h3>What the columns mean</h3>
+  <dl><div><dt>Planned</dt><dd>From the resource plan. What you intended the week to be.</dd></div><div><dt>Actual</dt><dd>Filed, or the current draft where a week is not filed yet. Read it as provisional until everyone is in.</dd></div><div><dt>On track</dt><dd>Actual close enough to planned. Not a judgement about the person, and worth saying out loud before anyone sees this report.</dd></div></dl>
+  <div class="note"><p>A person reading well under plan is more often a stale resource plan than a quiet week. Check the plan before you check in with them.</p></div>
+  <h3>What it is not</h3>
+  <p>This is not billability and it is not a productivity measure. It compares two numbers you already had. Introducing it as a performance report is the fastest way to get careful, useless timesheets.</p>
+  
+<figure class="fig">
+  <img src="../assets/utilization-summary.png" alt="Four summary figures: planned 301 hours across 11 people, actual 0 hours, utilization 0 percent, and on track 0 of 11 with 11 under" width="1292" height="238" loading="lazy">
+  <figcaption>Early in a week this reads as everyone under. That is the week being young, not the team being idle.</figcaption>
+</figure>
+</article>
+
+<article id="agency-breakdown">
+  <h2>Agency breakdown</h2>
+  <p class="lead">Hours by job code across everyone, for the week you are looking at. The answer to where the agency actually spent itself.</p>
+  <h3>Reading it</h3>
+  <p>Codes in order of hours, so the top of the list is where your capacity went whether or not that is where you meant it to go. Smaller codes gather into <strong>Other</strong> rather than making a long tail you have to scroll.</p>
+  <p>It does not wait for anyone to file. Each person counts once, their filed timesheet where they have sent one and their current draft where they have not, and the line under the table says how many of each went into the total. So it reads mid-week, as long as you read it knowing part of it is still draft.</p>
+  <h3>The comparison worth making</h3>
+  <p>Put this beside the resource plan rather than reading it alone. The plan says what you sold and staffed; this says what happened. A code consistently above its plan is either underquoted or overserviced, and those have opposite fixes.</p>
+  
+<figure class="fig">
+  <img src="../assets/agency-breakdown.png" alt="The Agency breakdown card: a ring reading 72h total for the week, a legend of three job codes with their hours and share, and a table beneath giving each project its people, hours, share and a distribution bar" width="1204" height="1007" loading="lazy">
+  <figcaption>The job code, its project name and the client sit together on each row, so a code nobody recognizes is still readable.</figcaption>
+</figure>
+</article>
+
+  <div class="grp">
+    <h2 class="gh">Approvals</h2>
+    <p class="blurb">Checking and returning the weeks that come to you</p>
+  </div>
+  
+<article id="approving-timesheets">
+  <h2>Approving timesheets</h2>
+  <p class="lead">If your workspace has approvals switched on and you are set as an approver, filed weeks come to you before they are final.</p>
+  <p>You do not have to be an administrator for this. Approving is set per person, so a team lead can approve without having any access to your job codes or your plan.</p>
+  <h3>What you are actually checking</h3>
+  <p>Not arithmetic. Samay has already done that, and a week that adds up can still be wrong in every way that matters.</p>
+  <ul><li>Hours against a code you know that person was not on</li><li>A week that looks exactly like the resource plan, which can mean nobody looked at it</li><li>A sharp change from how someone usually files, which is worth a conversation rather than a rejection</li></ul>
+  <div class="note"><p>Nobody approves their own timesheet, including you. Your weeks go to someone else, and that is not configurable.</p></div>
+  <h3>Sending one back</h3>
+  <p>Returning a week reopens it for the person and tells them. Say what you want changed when you do: a week returned with no reason comes back unchanged, usually twice.</p>
+  
+<figure class="fig">
+  <img src="../assets/approvals-queue.png" alt="The approvals queue with three week tabs each showing a count of one waiting, a select-all-waiting control, and bulk actions to send back or approve the selected weeks" width="1568" height="104" loading="lazy">
+  <figcaption>Weeks are grouped by the week they cover, not by who filed them.</figcaption>
+</figure>
+</article>
+
+  <footer>
+    <p>These pages mirror the help center inside Samay. Sign in at <a href="https://app.samayapp.co">app.samayapp.co</a> to read them there, where they are filtered to what your own account can do.</p>
+    <p>Something here wrong, or missing? Write to <a href="mailto:support@samayapp.co">support@samayapp.co</a>.</p>
+  </footer>
+</div>
+</body>
+</html>
